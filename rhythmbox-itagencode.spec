@@ -1,16 +1,16 @@
 Summary:	encode ID3 tags from cp1251 to UTF-8 
 Name:		rhythmbox-itagencode
-Version:	0.1
-Release:	1
+Version:	0.2
+Release:	1%{?dist}.R
 
 License:	GPLv2+
 Group:		Applications/Multimedia
 URL:		http://code.google.com/p/encodeid3tags/
-Source:		http://encodeid3tags.googlecode.com/files/idTagEncode_v01.tar.gz
+Source:		http://encodeid3tags.googlecode.com/files/idTagEncode.02.tar.gz
 Source1:	rhythmbox-itagencode.schemas
 BuildRoot:	{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Requires:	rhythmbox
+Requires:	rhythmbox >= 2.90
 
 BuildArch:	noarch
 
@@ -19,7 +19,7 @@ Plugin for gnome music player Rhythmbox - encode ID3 tags from cp1251 to UTF-8
 
 
 %prep
-%setup -q -n idTagEncode
+%setup -q -n idTagEncode.02
 
 
 %build
@@ -60,6 +60,9 @@ fi
 
 
 %changelog
+* Mon May 23 2011 Arkady L. Shane <ashejn@yandex-team.ru> 0.2-1.R
+- update to 0.2
+
 * Wed Sep 29 2010 Arkady L. Shane <ashejn@yandex-team.ru> 0.1-1
 - update to 0.1
 
